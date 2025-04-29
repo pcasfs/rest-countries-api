@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search countries</title>
+    <link rel="stylesheet" href="./api.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>나라 검색 웹 사이트</h1>
+      </header>
+      <div class="wrapper-search">
+        <label for="search-input">나라 검색: </label>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="나라명을 검색하세요"
+        />
+        <button onclick="searchCountry()">검색</button>
+      </div>
+      <div class="country-container"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
