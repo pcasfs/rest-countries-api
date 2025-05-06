@@ -10,18 +10,26 @@
     <div class="wrapper">
       <header>
         <h1>나라 검색 웹 사이트</h1>
+          <label for="search-input">나라 검색: </label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="나라명을 검색하세요"
+          />
+          <select id="choseRegion">
+            <option value="전체 대륙">전체 대륙</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Americas">Americas</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
       </header>
-      <div class="wrapper-search">
-        <label for="search-input">나라 검색: </label>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="나라명을 검색하세요"
-        />
-        <button onclick="searchCountry()">검색</button>
-      </div>
-      <div class="country-container"></div>
-    </div>
+      <main class="wrapper-main">
+        <div class="country-container"></div>
+        <div class="wrapper-detail"></div>
+      </main>
     <script src="./main.js"></script>
   </body>
 </html>
