@@ -19,12 +19,12 @@ const searchCountry = function () {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       const filtered = data.filter((country) =>
         country.name.common.toLowerCase().includes(nameInput)
       );
       showResult(filtered);
-      console.log(filtered);
+      // console.log(filtered);
     })
     .catch((error) => console.log(error));
 };
@@ -154,7 +154,10 @@ selectElement.addEventListener("change", () => {
   const selectedValue = selectElement.value.toLowerCase();
   // console.log(selectedValue);
   if (selectedValue === "전체 대륙") {
-    searchCountry();
+    fetch("https://restcountries.com/v3.1/all")
+      .then((response) => response.json())
+      .then((data) => showResult(data))
+      .catch((error) => console.log(error));
   } else {
     fetch(`https://restcountries.com/v3.1/region/${selectedValue}`)
       .then((response) => response.json())
